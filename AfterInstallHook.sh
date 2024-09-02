@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cd /home/ubuntu/deploydir
+cd /home/ubuntu
 npm install
 npm run build
 pm2 start app.js
