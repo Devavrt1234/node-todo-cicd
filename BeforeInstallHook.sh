@@ -11,6 +11,8 @@ dir_path="/home/ubuntu/views"  # replace with the directory you want to check
 
 if [ -d "$dir_path" ]; then
     echo "The directory exists code is brought by aws codedeploy-agent successfully"
+    pm2 start app.js
 else
+
     echo "The directory does not exist.some error occurred"
 fi
