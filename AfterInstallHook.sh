@@ -2,5 +2,6 @@
 set -e
 cd /home/ubuntu
 npm install
-npm run build
+npm init -y
+node app.js
 
