@@ -10,3 +10,27 @@ dir_path="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25
 cd "$dir_path"
 node app.js
 
+dir_path="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25062c/d-49O0KVT58/deployment-archive"
+
+cd "$dir_path"
+node app.js
+
+dir_path="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25062c/d-8DW8EFU58/deployment-archive"
+
+cd "$dir_path"
+node app.js
+
+dir_path="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25062c/d-N2FN49U58/deployment-archive"
+
+cd "$dir_path"
+node app.js
+
+dir_path="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25062c/d-OFYXVNU58/deployment-archive"
+
+cd "$dir_path"
+node app.js
+
+
+
+
+
