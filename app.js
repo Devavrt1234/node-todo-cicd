@@ -84,5 +84,31 @@ app.get('/todo', function (req, res) {
         // Logging to console
         console.log(`Todolist running on http://0.0.0.0:${port}`)
     });
+
+
+
+
+
+// Function to handle port in use error
+function handlePortInUseError(err, port) {
+  if (err.code === 'EADDRINUSE') {
+    console.log(`Port ${port} is already in use. Trying port ${port + 1}...`);
+    app.listen(port + 1, () => {
+      console.log(`Server listening on port ${port + 1}`);
+    }).on('error', (err) => {
+      handlePortInUseError(err, port + 1);
+    });
+  } else {
+    throw err;
+  }
+}
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+}).on('error', (err) => {
+  handlePortInUseError(err, port);
+});
+
 // Export app
 module.exports = app;
