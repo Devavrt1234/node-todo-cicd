@@ -19,17 +19,9 @@ for dir in "${directories[@]}"; do
     sudo apt install pm2@latest -g
     pm2 status
     pm2 list
-    pm2 app.js
+    pm2 start app.js
     break
   fi
 done
 
-new_dir=$(find . -type d -not -name "${directories[@]}" -print -quit)
 
-if [ -n "$new_dir" ]; then
-  for dir in "${directories[@]}"; do
-    rm -rf "$dir"
-  done
-  cd "$new_dir"
-  node app.js
-fi
