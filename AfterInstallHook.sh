@@ -10,14 +10,10 @@ directories="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2
 #rsync -avz "$newest_dir"/ /home/ubuntu/
 
 
-
-  if [ -d "$directories" ]; then
-    cd d-9NW56YU58    
-    cd deployment-archive
-    sudo apt install pm2@latest -g
-    pm2 status
-    pm2 list
-    pm2 start app.js
+cd d-9NW56YU58    
+cd deployment-archive
+sudo apt install pm2@latest -g
+node app.js
     
 
 
