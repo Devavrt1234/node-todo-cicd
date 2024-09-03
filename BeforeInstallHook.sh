@@ -5,30 +5,16 @@ sudo npm install
 sudo systemctl status codedeploy-agent
 sudo systemctl restart codedeploy-agent
 
-dir_path="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25062c/d-PBOXI1U58/deployment-archive"
+#!/bin/bash
 
-cd "$dir_path"
-node app.js
+# Get the list of directories in the current directory
+directories="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25062c"
 
-dir_path="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25062c/d-49O0KVT58/deployment-archive"
+# Get the newest directory
+newest_dir=$(printf "%s\n" "${directories[@]}" | sort -n | tail -1)
 
-cd "$dir_path"
-node app.js
-
-dir_path="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25062c/d-8DW8EFU58/deployment-archive"
-
-cd "$dir_path"
-node app.js
-
-dir_path="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25062c/d-N2FN49U58/deployment-archive"
-
-cd "$dir_path"
-node app.js
-
-dir_path="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25062c/d-OFYXVNU58/deployment-archive"
-
-cd "$dir_path"
-node app.js
+# Rsync the newest directory to /home/ubuntu
+rsync -avz "$newest_dir"/ /home/ubuntu/
 
 
 
