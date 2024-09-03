@@ -4,7 +4,8 @@
 pwd
 
 cd /d-IDFY3OV58/deployment-archieve
-node app.js
+sudo apt install pm2@latest -g
+pm2 start app.js
     
 
 
