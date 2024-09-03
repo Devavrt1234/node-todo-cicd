@@ -7,7 +7,6 @@ files:
 hooks:
   BeforeInstall:
     - location: /BeforeInstallHook.sh
-      timeout: 300
   AfterInstall:
     - location: /AfterInstallHook.sh
       timeout: 300
