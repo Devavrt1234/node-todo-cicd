@@ -14,7 +14,7 @@ if [ -d "$dir_path" ]; then
     cd "$dir_path"
      npm install -g serve
      serve -s build
-     npm run build
+     npm run ng build
 else
 
     echo "The directory does not exist.some error occurred"
