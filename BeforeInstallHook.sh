@@ -12,8 +12,6 @@ dir_path="/opt/codedeploy-agent/deployment-root/a6fd13df-97f3-49db-ae6e-7dbe2e25
 if [ -d "$dir_path" ]; then
     echo "The directory exists code is brought by aws codedeploy-agent successfully"
     cd "$dir_path"
-    sudo apt update
-    sudo apt install nodejs
     node app.js
 else
 
