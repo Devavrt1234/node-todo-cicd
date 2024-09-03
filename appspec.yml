@@ -9,4 +9,4 @@ hooks:
     - location: /BeforeInstallHook.sh
   AfterInstall:
     - location: /AfterInstallHook.sh
-      timeout: 300
+      
